@@ -26,27 +26,28 @@ module.exports = {
   },
 
   createUser(request, response){
-    let body = ''
+    const {body} = request;
+    const lasUserId = users[users.length - 1 ].id;
+
+    const newUser = {
+      id: lasUserId +1,
+      name: body.name,
+    }
+
+    users.push(newUser)
+
+    response.send(200, newUser);
+  },
 
 
-    request.on('data', (chunk) => {
-      body += chunk
-    })
+  deleteUserById(){
+    const { id } = request.params;
+    const user = users.filter((user) => user.id !== Number(id));
 
-    request.on('end', () => {
-      body = JSON.parse(body)
+    if (!user) {
+      return response.send(400, { error: 'User Not Found' });
+    }
 
-      const lasUserId = users[users.length - 1 ].id;
-
-      const newUser = {
-        id: lasUserId +1,
-        name: body.name,
-      }
-
-      users.push(newUser)
-
-      response.send(200, newUser);
-    })
-
-  }
+    response.send(200, user);
+  },
 };
