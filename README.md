@@ -10,9 +10,9 @@ Este é um exemplo de API de gerenciamento de usuários em Node.js. Ele lida com
 ## Instalação
 
 1. Clone este repositório para o seu computador:
-
-git clone https://github.com/MatheusGorga/firstapi
-cd firstapi
+  
+  - git clone https://github.com/MatheusGorga/firstapi
+  - cd firstapi
 
 
 ## Uso
