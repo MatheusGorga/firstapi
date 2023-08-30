@@ -17,22 +17,22 @@ cd firstapi
 
 ## Uso
 
-npm src/index.js
-Acesse as rotas da API em http://localhost:8000.
+- npm src/index.js
+- Acesse as rotas da API em http://localhost:8000.
 
 ## Rotas
 
 A API oferece as seguintes rotas:
 
-GET /users: Lista todos os usuários.
-GET /users/:id: Busca um usuário pelo ID.
-POST /users: Cria um novo usuário.
-PUT /users/:id: Atualiza os detalhes de um usuário existente.
-DELETE /users/:id: Exclui um usuário pelo ID.
+- GET /users: Lista todos os usuários.
+- GET /users/:id: Busca um usuário pelo ID.
+- POST /users: Cria um novo usuário.
+- PUT /users/:id: Atualiza os detalhes de um usuário existente.
+- DELETE /users/:id: Exclui um usuário pelo ID.
 
 ## Estrutura do Código
 
-routes.js: Definição das rotas da API.
-controller/UserController.js: Lógica de manipulação das rotas.
-helpers/bodyParser.js: Função para análise do corpo da requisição.
-index.js: Configuração do servidor.
+- routes.js: Definição das rotas da API.
+- controller/UserController.js: Lógica de manipulação das rotas.
+- helpers/bodyParser.js: Função para análise do corpo da requisição.
+- index.js: Configuração do servidor.
